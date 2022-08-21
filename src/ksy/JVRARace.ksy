@@ -5,6 +5,8 @@ meta:
 seq:
   - id: record
     type: record
+    terminator: 0xa
+    size-eos: true
     repeat: eos
 types:
   record:
@@ -17,9 +19,10 @@ types:
         size: 1
       - id: created_at
         type: created_at
+      - id: race_id
+        type: race_id
       - id: body
         type: body
-        if: data_kubun != "A" and data_kubun != "B"
   created_at:
     seq:
       - id: year
@@ -54,6 +57,9 @@ types:
       - id: race_num
         type: str
         size: 2
+    instances:
+      id:
+        value: year + month + day + jyo_code + kaiji + nichiji + race_num
   result:
     seq:
       - id: lap_time_strs
@@ -134,8 +140,6 @@ types:
         value: _parent.lap_time_strs[i].to_i
   body:
     seq:
-      - id: race_id
-        type: race_id
       - id: youbi_code
         type: str
         size: 1
@@ -272,6 +276,9 @@ types:
         size: 1
       - id: result
         type: result
+      - id: record_up_kubun
+        type: str
+        size: 1
     instances:
       kyori:
         value: kyori_str.to_i

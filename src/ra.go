@@ -26,6 +26,6 @@ func raRead(filename string) (ra *JvRaRace, err error) {
 	return ra, err
 }
 
-func raWriteDB(ra *JvRaRace) (err error) {
+// func raWriteDB(ra *JvRaRace) (err error) {
 
-}
+// }

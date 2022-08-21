@@ -14,7 +14,7 @@ func TestRead(t *testing.T) {
 
 	for _, file := range files {
 		t.Run(file, func(t *testing.T) {
-			_, err = raRead(file)
+			_, err := raRead(file)
 			if err != nil {
 				t.Fatal(err)
 			}
