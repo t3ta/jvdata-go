@@ -1,0 +1,13 @@
+{
+    "name": "jvdata-go-container",
+    "dockerComposeFile": [
+        "../docker-compose.yml"
+    ],
+    "extensions": [
+        "EditorConfig.EditorConfig",
+        "esbenp.prettier-vscode",
+        "golang.go",
+        "MS-CEINTL.vscode-language-pack-ja"
+    ],
+    "workspaceFolder": "/go/src/app"
+}

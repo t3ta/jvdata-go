@@ -1,0 +1,10 @@
+{
+    "name": "jvdata-go-container",
+    "dockerComposeFile": [
+        "../docker-compose.yml"
+    ],
+    "service": "app",
+    "remoteUser": "root",
+    "extensions": [],
+    "settings": {}
+}
