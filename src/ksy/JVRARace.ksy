@@ -17,13 +17,13 @@ types:
       - id: data_kubun
         type: str
         size: 1
-      - id: created_at
-        type: created_at
+      - id: record_created_at
+        type: record_created_at
       - id: race_id
         type: race_id
       - id: body
         type: body
-  created_at:
+  record_created_at:
     seq:
       - id: year
         type: str
